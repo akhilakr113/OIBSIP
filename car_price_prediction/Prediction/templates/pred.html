@@ -1,0 +1,84 @@
+<style>
+    table {
+        width: 50%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+    }
+
+    input[type="text"], input[type="submit"] {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+</style>
+
+<form method="post">
+    <table>
+        <tr>
+            <th>Year</th>
+            <td><input type="text" name="year"></td>
+        </tr>
+        <tr>
+            <th>Present Price</th>
+            <td><input type="text" name="pp"></td>
+        </tr>
+        <tr>
+            <th>Kms Driven</th>
+            <td><input type="text" name="kd"></td>
+        </tr>
+        <tr>
+            <th>Fuel Type</th>
+            <td><input type="text" name="ft"></td>
+        </tr>
+        <tr>
+            <th>Seller Type</th>
+            <td><input type="text" name="st"></td>
+        </tr>
+        <tr>
+            <th>Owner</th>
+            <td><input type="text" name="owner"></td>
+        </tr>
+        <tr>
+            <th>Car Name</th>
+            <td><input type="text" name="cname"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" name="sub" value="Predict"></td>
+        </tr>
+    </table>
+    {% if data %}
+        <h1>Selling Price Of the {{Car_name}} is {{ data }} Lacks</h1>
+    {% endif %}
+</form>
+
