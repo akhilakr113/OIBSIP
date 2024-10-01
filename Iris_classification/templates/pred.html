@@ -1,0 +1,73 @@
+<style>
+    table {
+        width: 50%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+    }
+
+    input[type="text"], input[type="submit"] {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+</style>
+<br><br><br>
+<form method="post">
+    <table>
+        <tr>
+            <th>Sepal Length</th>
+            <td><input type="text" name="sl"></td>
+        </tr>
+        <tr>
+            <th>Sepal Width</th>
+            <td><input type="text" name="sw"></td>
+        </tr>
+        <tr>
+            <th>Petal Length</th>
+            <td><input type="text" name="pl"></td>
+        </tr>
+        <tr>
+            <th>Petal Width</th>
+            <td><input type="text" name="pw"></td>
+        </tr>
+       
+        <tr>
+            <td><input type="submit" name="sub" value="Predict"></td>
+        </tr>
+     
+    </table>
+    {% if data %}
+    <h1>The species is {{data}}</h1>
+{% endif %}
+</form>
